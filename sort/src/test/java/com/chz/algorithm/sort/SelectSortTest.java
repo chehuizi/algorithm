@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BubbleSortTest extends SortTest {
+public class SelectSortTest extends SortTest {
 
 	@Test
 	public void testSort() {
@@ -13,7 +13,8 @@ public class BubbleSortTest extends SortTest {
 
 	@Override
 	public Sort create() {
-		BubbleSort bubbleSort = new BubbleSort();
-		return bubbleSort;
+		SelectSort selectSort = new SelectSort();
+		return selectSort;
 	}
+
 }
