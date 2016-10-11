@@ -1,7 +1,29 @@
 package com.chz.algorithm.sort;
 
 public abstract class Sort {
-	public abstract int[] sort(int[] initialArray);
+	
+	public abstract int[] operate(int[] initialArray);
+	
+	public int[] sort(int[] initialArray) {
+		if (initialArray == null) {
+			System.out.println("input param is null...");
+			return null;
+		} else {
+			if (initialArray.length == 0) {
+				System.out.println("the size of the input array is zero...");
+				return initialArray;
+			} else if (initialArray.length == 1) {
+				System.out.println("排序结果：" + output(initialArray));
+				return initialArray;
+			} else {
+				System.out.println("初始数组：" + output(initialArray));
+				int[] result = operate(initialArray);
+				System.out.println("排序结果：" + output(initialArray));
+				return result;
+			}
+		}
+		
+	}
 	
 	public void swap(int[] array, int i, int j) {
 		int tmp = array[j];
