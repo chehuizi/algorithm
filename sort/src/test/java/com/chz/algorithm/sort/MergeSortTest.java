@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class InsertSortTest extends SortTest {
+public class MergeSortTest extends SortTest {
 
 	@Test
 	public void testSort() {
@@ -13,8 +13,8 @@ public class InsertSortTest extends SortTest {
 
 	@Override
 	public Sort create() {
-		InsertSort insertSort = new InsertSort();
-		return insertSort;
+		MergeSort mergeSort = new MergeSort();
+		return mergeSort;
 	}
 
 }

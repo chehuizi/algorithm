@@ -18,7 +18,7 @@ public abstract class Sort {
 			} else {
 				System.out.println("初始数组：" + output(initialArray));
 				int[] result = operate(initialArray);
-				System.out.println("排序结果：" + output(initialArray));
+				System.out.println("排序结果：" + output(result));
 				return result;
 			}
 		}
@@ -37,5 +37,17 @@ public abstract class Sort {
 			strBuff.append(array[i] + " ");
 		}
 		return strBuff.toString().length() > 0 ? strBuff.toString().substring(0, strBuff.toString().length()-1) : "";
+	}
+	
+	public int[] copy(int[] array, int from, int to) {
+		if (from >= 0 && to >= 0 && (to - from) >= 0) {
+			int[] result = new int[to-from+1];
+			for (int i=0; i<result.length; i++) {
+				result[i] = array[from+i];
+			}
+			return result;
+		} else {
+			return null;
+		}
 	}
 }
