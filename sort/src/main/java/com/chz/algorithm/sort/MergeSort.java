@@ -11,12 +11,12 @@ public class MergeSort extends Sort {
 			int[] b = copy(initialArray, initialArray.length/2, initialArray.length-1);
 			a = operate(a);
 			b = operate(b);
-			int[] result = merge(a, b);
+			int[] result = compare(a, b);
 			return result;
 		}
 	}
 
-	private int[] merge(int[] a, int[] b) {
+	private int[] compare(int[] a, int[] b) {
 		int[] c = new int[a.length+b.length];
 		int cIndex = 0;
 		int aIndex = 0;

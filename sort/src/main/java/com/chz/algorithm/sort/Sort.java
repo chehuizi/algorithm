@@ -46,8 +46,22 @@ public abstract class Sort {
 				result[i] = array[from+i];
 			}
 			return result;
+		} else if (from >= 0 && to < 0) {
+			return array;
 		} else {
-			return null;
+			return array;
 		}
+	}
+	
+	public int[] merge(int[] a, int[] b) {
+		int[] c = new int[a.length+b.length];
+		int index = 0;
+		for (int i=0; i<a.length; i++) {
+			c[i] = a[i];
+		}
+		for (int j=0; j<b.length; j++) {
+			c[a.length+j] = b[j];
+		}
+		return c;
 	}
 }
